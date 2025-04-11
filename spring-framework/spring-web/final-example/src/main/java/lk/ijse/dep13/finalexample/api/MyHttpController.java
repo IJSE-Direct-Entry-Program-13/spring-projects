@@ -1,15 +1,16 @@
-package lk.ijse.dep13.requesttime.api;
+package lk.ijse.dep13.finalexample.api;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@RequestMapping("/hello1")
 @RestController
-@RequestMapping("/hello")
 public class MyHttpController {
 
     @GetMapping
-    public String greeting(String str) {
-        return "<h1>Hello Controller</h1>";
+    public String hello() {
+        System.out.println("MyHttpController:hello()");
+        return "<h1>Hello</h1>";
     }
 }
